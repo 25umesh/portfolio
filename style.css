@@ -116,7 +116,7 @@ header {
   background-color: var(--primary-dark);
 }
 
-/* Footer Navigation below buttons */
+/* Footer Navigation */
 .site-footer {
   margin-top: 30px;
   padding-top: 15px;
@@ -150,6 +150,7 @@ header {
   .image {
     width: 100%;
     height: 260px;
+    order: -1; /* Move image above content */
   }
 
   .content {
