@@ -1,0 +1,144 @@
+:root {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #333;
+  --muted: #6c757d;
+  --primary: #007bff;
+  --primary-dark: #0056b3;
+  --shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+header p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* Skills Grid */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Skill Card */
+.skill-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card .icon {
+  font-size: 2.4rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tags span {
+  background: #f1f3f6;
+  color: #555;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Dark Button (for CTA) */
+.btn.dark {
+  background-color: #222;
+}
+
+.btn.dark:hover {
+  background-color: #444;
+}
+
+/* CTA Section */
+.cta {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.cta h2 {
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.cta p {
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 1rem;
+}
