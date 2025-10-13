@@ -106,6 +106,7 @@
       align-items: center;
       margin: 12px 0;
       font-size: 15px;
+      word-break: break-word;
     }
 
     .contact-item i {
@@ -118,10 +119,18 @@
       color: #fff;
       text-decoration: none;
       transition: color 0.3s ease;
+      word-break: break-word; /* Fixes long email/text overflow */
     }
 
     .contact-item a:hover {
       color: #ccc;
+    }
+
+    /* Autofill style fix (optional) */
+    input:-webkit-autofill,
+    textarea:-webkit-autofill {
+      background-color: #fff !important;
+      color: #000 !important;
     }
 
     /* Desktop view: row layout (details left, form right) */
@@ -153,13 +162,19 @@
 
       .contact-item {
         justify-content: center;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      .contact-item i {
+        margin-bottom: 5px;
       }
     }
   </style>
 </head>
 <body>
   <div class="contact-wrapper">
-    <!-- Details first in HTML -->
+    <!-- Contact Details Section -->
     <div class="details-section">
       <h3>Contact Details</h3>
       <div class="contact-item">
@@ -179,7 +194,7 @@
       </div>
     </div>
 
-    <!-- Form second in HTML -->
+    <!-- Contact Form Section -->
     <div class="form-section">
       <h2>Get In Touch</h2>
       <form action="https://formspree.io/f/xqaylzng" method="POST">
@@ -187,7 +202,7 @@
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="phone" placeholder="Your Phone (optional)" />
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        
+
         <input type="hidden" name="_next" value="redirect.html" />
         <input type="text" name="_honey" style="display:none">
 
